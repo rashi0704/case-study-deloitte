@@ -23,8 +23,8 @@ public class ApplicationMain {
 
 			List<Activity> activity = fileService.loadActivitiesFromResources(INPUT);
 			ActivityDay activityDay = new ActivityDay(LocalTime.of(9, 00), LocalTime.of(12, 00), LocalTime.of(13, 00),
-					LocalTime.of(17, 00));
-			System.out.println("Deloitte Away Day:");
+					LocalTime.of(17, 00),"Staff Motivation Presentation",LocalTime.of(17, 00));
+			System.out.println("Deloitte Away Day: OUTPUT");
 			for (Team team : activityCreator.createActivitiesForDay(activity, activityDay)) {
 				System.out.println(team);
 				for (Program program : team.getPrograms()) {

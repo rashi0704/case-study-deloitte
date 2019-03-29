@@ -9,6 +9,8 @@ public class ActivityDay {
 	private LocalTime morningEndTime;
 	private LocalTime eveningStartTime;
 	private LocalTime eveningEndTime;
+	private String endActivity;
+	private LocalTime endActivityTime;
 	
 	public LocalTime getMorningStartTime() {
 		return morningStartTime;
@@ -26,13 +28,23 @@ public class ActivityDay {
 		return eveningEndTime;
 	}
 
+	public String getEndActivity() {
+		return endActivity;
+	}
+
+	public LocalTime getEndActivityTime() {
+		return endActivityTime;
+	}
+
 	public ActivityDay(LocalTime morningStartTime, LocalTime morningEndTime, LocalTime eveningStartTime,
-			LocalTime eveningEndTime) {
+			LocalTime eveningEndTime, String endActivity, LocalTime endActivityTime) {
 		super();
 		this.morningStartTime = morningStartTime;
 		this.morningEndTime = morningEndTime;
 		this.eveningStartTime = eveningStartTime;
 		this.eveningEndTime = eveningEndTime;
+		this.endActivity= endActivity;
+		this.endActivityTime= endActivityTime;
 	}
 	
 	public long getActivityMinutes(){
